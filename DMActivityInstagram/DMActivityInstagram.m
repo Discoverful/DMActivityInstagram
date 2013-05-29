@@ -117,7 +117,7 @@
 
 -(BOOL)imageIsLargeEnough:(UIImage *)image {
     CGSize imageSize = [image size];
-    return (imageSize.height * image.scale >= 612 && imageSize.width * image.scale >= 612);
+    return (imageSize.height * image.scale >= 480 && imageSize.width * image.scale >= 480);
 }
 
 -(BOOL)imageIsSquare:(UIImage *)image {
