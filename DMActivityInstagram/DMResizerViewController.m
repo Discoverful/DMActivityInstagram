@@ -129,6 +129,10 @@
     //CGContextRotateCTM(UIGraphicsGetCurrentContext(), rotation);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
+    // fill the background
+    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextFillRect(context, CGRectMake(0, 0, 640, 640));
+    
     // Required to apply rotation, move the axis of rotation by a little bit
     CGContextTranslateCTM(context, 320, 320); // drawingRect has been offset to handle this
     CGContextRotateCTM(context, rotation);
